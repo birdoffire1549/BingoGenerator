@@ -14,11 +14,15 @@ import java.util.Random;
 import java.util.Scanner;
 
 public final class Utilities {
-
+	/**
+	 * PRIVATE CONSTRUCTOR: Prevents instantiation.
+	 * 
+	 */
 	private Utilities() {}
 	
 	/**
-	 * MaxNumber will be the size of drawnNumbers array.
+	 * Randomly draw a new number that has not yet been chosen.
+	 * 
 	 * @param drawnNumbers
 	 * @param minNum
 	 * @return
@@ -40,6 +44,12 @@ public final class Utilities {
 		return null;
 	}
 	
+	/**
+	 * Converts a number to its BINGO equivalent.
+	 * 
+	 * @param number
+	 * @return
+	 */
 	public static String numberToBingo(int number) {
 		if (number >= LETTER_RANGES[B][MIN]
 				&& number <= LETTER_RANGES[B][MAX]
@@ -71,6 +81,11 @@ public final class Utilities {
 		return null;
 	}
 	
+	/**
+	 * Simply waits for the enter key to be pressed.
+	 * 
+	 * @throws Exception
+	 */
 	@SuppressWarnings("resource")
 	public static void waitForEnterKey() throws Exception {
 		Scanner sc = new Scanner(System.in);

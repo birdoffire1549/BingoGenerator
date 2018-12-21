@@ -8,25 +8,35 @@ import java.util.List;
 
 import static com.firebirdcss.games.bingo.InternalProperties.*;
 /**
- * @author sgriffis
+ * The main class of the application which happens to contain the main method which 
+ * is the main entry point.
+ * 
+ * @author Scott Griffis
  *
  */
-public class ApplicationMain {
+public final class ApplicationMain {
 	/**
+	 * PRIVATE CONSTRUCTOR: Used to ensure the class is not instantiated.
 	 * 
 	 */
-	public ApplicationMain() {
-		// TODO Auto-generated constructor stub
+	private ApplicationMain() {
+		// Do nothing...
 	}
 
 	/**
-	 * @param args
+	 * This is the main method and entry-point for the application.
+	 * 
+	 * @param args - Not used.
 	 */
 	public static void main(String[] args) {
 		List<Integer> numbersDrawn = new ArrayList<>();
 		
+		System.out.println(InternalProperties.BINGO_TEXT_ART);
 		System.out.println("Ready to play B-I-N-G-O!!!");
-		System.out.println("Simply press any-key to get a Bingo number and I will tell you when I have handed out all of the numbers...");
+		System.out.println("Simply press ENTER to get a Bingo number...");
+		System.out.println("I will tell you when I have handed out all of the numbers.");
+		System.out.println("Press ENTER when ready:");
+		
 		boolean gameOver = false;
 		int c = 0;
 		while (!gameOver) {
@@ -44,5 +54,4 @@ public class ApplicationMain {
 		
 		System.out.println("~ Game Over ~");
 	}
-
 }
