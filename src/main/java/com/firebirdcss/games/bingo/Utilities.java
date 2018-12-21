@@ -13,6 +13,13 @@ import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * This class contains the utility methods of the application which 
+ * may be used throughout the application.
+ * 
+ * @author Scott Griffis
+ *
+ */
 public final class Utilities {
 	/**
 	 * PRIVATE CONSTRUCTOR: Prevents instantiation.

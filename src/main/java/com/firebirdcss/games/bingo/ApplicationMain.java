@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.firebirdcss.games.bingo;
 
 import static com.firebirdcss.games.bingo.InternalProperties.B;
@@ -21,6 +18,14 @@ import java.util.Scanner;
  *
  */
 public final class ApplicationMain {
+	/**
+	 * PRIVATE CONSTRUCTOR: Used to ensure the class is not instantiated.
+	 * 
+	 */
+	private ApplicationMain() {
+		// Do nothing...
+	}
+
 	private static List<Integer> numbersDrawn = null;
 	private static String message = InternalProperties.BINGO_TEXT_ART + "\n"
 			+ "Ready to play B-I-N-G-O!!!\n"
@@ -31,14 +36,6 @@ public final class ApplicationMain {
 	private static int counter = 0;
 	private static Scanner scanner = null;
 	
-	/**
-	 * PRIVATE CONSTRUCTOR: Used to ensure the class is not instantiated.
-	 * 
-	 */
-	private ApplicationMain() {
-		// Do nothing...
-	}
-
 	/**
 	 * This is the main method and entry-point for the application.
 	 * 
@@ -90,7 +87,7 @@ public final class ApplicationMain {
 				}
 			} else {
 				clearScreen();
-				draw();
+				gameOver = draw();
 			}
 		}
 		
@@ -98,6 +95,12 @@ public final class ApplicationMain {
 		scanner.close();
 	}
 	
+	/**
+	 * This method handles drawing a new BINGO number that hasn't yet
+	 * been drawn.
+	 * 
+	 * @return Returns true if all numbers handed out, otherwise returns false.
+	 */
 	private static boolean draw() {
 		Integer number = Utilities.drawNewNumber(numbersDrawn, LETTER_RANGES[B][MIN], LETTER_RANGES[O][MAX]);
 		System.out.println(message);
@@ -112,6 +115,13 @@ public final class ApplicationMain {
 		return false;
 	}
 	
+	/**
+	 * This method is used to verify that the numbers given for a potential 
+	 * BINGO were in-fact called.
+	 * 
+	 * @return Returns true if numbers are valid, otherwise returns false.
+	 * @throws Exception
+	 */
 	private static boolean verifyCard() throws Exception {
 		System.out.println("Please enter the card numbers separated by commas (example: 13,1,11,4,3):");
 		String input = Utilities.waitForEntry(scanner);
@@ -132,6 +142,10 @@ public final class ApplicationMain {
 		return false;
 	}
 	
+	/**
+	 * This method clears the console.
+	 * 
+	 */
 	private static void clearScreen() {
 		System.out.print("\033[H\033[2J");  
 	    System.out.flush();

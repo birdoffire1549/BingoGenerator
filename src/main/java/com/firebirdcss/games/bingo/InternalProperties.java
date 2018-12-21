@@ -1,7 +1,10 @@
 package com.firebirdcss.games.bingo;
 
 public class InternalProperties {
-
+	/**
+	 * PRIVATE CONSTRUCTOR: Prevents class instantiation.
+	 * 
+	 */
 	private InternalProperties() {
 		// TODO Auto-generated constructor stub
 	}
@@ -48,8 +51,4 @@ public class InternalProperties {
 			"********************************************************************************************\n" + 
 			"* By: Scott Griffis                                                                        *\n" +
 			"********************************************************************************************\n";
-	
-	public static void main(String[] args) {
-		System.out.println(BINGO_TEXT_ART);
-	}
 }
