@@ -86,9 +86,9 @@ public final class Utilities {
 	 * 
 	 * @throws Exception
 	 */
-	@SuppressWarnings("resource")
-	public static void waitForEnterKey() throws Exception {
-		Scanner sc = new Scanner(System.in);
-		sc.nextLine();
+	public static String waitForEntry(Scanner sc) throws Exception {
+		String result = sc.nextLine();
+		
+		return result;
 	}
 }
