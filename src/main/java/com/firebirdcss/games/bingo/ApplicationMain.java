@@ -80,7 +80,7 @@ public final class ApplicationMain {
 					int c = 0;
 					for (Integer n : numbersDrawn) {
 						if (++c > 1) System.out.print(", ");
-						System.out.print(String.valueOf(n));
+						System.out.print(String.valueOf(Utilities.numberToBingo(n)));
 					}
 					System.out.println("");
 					System.out.print("\nPress ENTER when ready: ");
