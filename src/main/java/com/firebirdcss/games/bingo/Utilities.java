@@ -61,7 +61,10 @@ public final class Utilities {
      * @return Returns the Bingo version of the number as {@link String}
      */
     public static String numberToBingo(int number) {
-        if (number >= LETTER_RANGES[B][MIN]
+        if (number == -1) { // Number represents 'Free Space' value...
+            
+            return "Free Space";
+        } else if (number >= LETTER_RANGES[B][MIN]
             && number <= LETTER_RANGES[B][MAX]
         ) { // Number is in the 'B' range...
             
