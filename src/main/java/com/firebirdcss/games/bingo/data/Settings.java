@@ -1,13 +1,11 @@
-package com.firebirdcss.games.bingo;
+package com.firebirdcss.games.bingo.data;
 
-public class InternalProperties {
+public class Settings {
 	/**
 	 * PRIVATE CONSTRUCTOR: Prevents class instantiation.
 	 * 
 	 */
-	private InternalProperties() {
-		// TODO Auto-generated constructor stub
-	}
+	private Settings() {}
 	
 	public static final int B = 0;
 	public static final int I = 1;
