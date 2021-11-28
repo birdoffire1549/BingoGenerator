@@ -38,7 +38,7 @@ public final class Utilities {
      * @return Returns the chosen number as {@link Integer}
      */
     public static Integer drawNewNumber(List<Integer> drawnNumbers, int min, int max) {
-        if (min < max && drawnNumbers.size() < (max - min + 1)) {
+        if (min < max && (drawnNumbers.size() - 1 /*FreeSpace*/)  < (max - min + 1)) {
             Random rnd = new Random();
             while (true) {
                 Integer chosen = Integer.valueOf(rnd.nextInt((max - min) + 1) + min);
